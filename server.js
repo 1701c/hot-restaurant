@@ -42,8 +42,8 @@ app.get("/api/clear", function(req, res) {
 app.get("/api/visitors", function(req, res) {
   res.json(visitorCount);
 });
-app.post("/api/new", function(req, res) {
-  var tableData = req.body;
+app.post("/api/tables", function(req, res) {
+  var tableData = res.body;
   console.log(tableData);
   if (tableData && tableData.name) {
   	tableData.routeName = tableData.name.replace(/\s+/g, "").toLowerCase();
